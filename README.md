@@ -1,4 +1,4 @@
-# myself Govind Jangid & Garvita jain
+#  Govind Jangid & Garvita jain
 
 A simple and elegant web application that allows users to track time across different time zones. This application provides real-time updates for both local time and selected country's time.
 
