@@ -1,56 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Govind Jangid & Garvita jain </title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>World Clock - Govind & Garvita</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Time Zone Tracker</h1>
-            <nav>
-                <ul>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="https://www.linkedin.com/in/govindjangid75/">Linkdin</a></li>
-                    <li><a href="https://github.com/Govind137">GitHub</a></li>
-                    <li><a href="https://www.instagram.com/govind_jangid_93?igsh=MW1jZ3FsOGkxdHB4aw==">Instagram</a></li>
-                    <li><a href="#twitter">Twitter</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <main>
-            <div class="time-display">
-                <h2>Current Time</h2>
-                <div id="current-time"></div>
-            </div>
-
-            <div class="time-zone-selector">
-                <h3>Choose Country:</h3>
-                <select id="country-select">
-                    <option value="">Select a Country</option>
-                    <option value="America/New_York">USA</option>
-                    <option value="Europe/London">UK</option>
-                    <option value="Asia/Kolkata">India</option>
-                    <option value="Asia/Tokyo">Japan</option>
-                    <option value="Europe/Berlin">Germany</option>
-                    <option value="Europe/Paris">France</option>
-                    <option value="Australia/Sydney">Australia</option>
-                    <option value="America/Toronto">Canada</option>
-                    <option value="America/Mexico_City">Mexico</option>
-                    <option value="America/Sao_Paulo">Brazil</option>
-                    <option value="Asia/Shanghai">China</option>
-                    <option value="Europe/Moscow">Russia</option>
-                    <option value="Asia/Seoul">South Korea</option>
-                    <option value="Europe/Rome">Italy</option>
-                    <option value="Europe/Madrid">Spain</option>
-                </select>
-                <div id="selected-time"></div>
-            </div>
-        </main>
-    </div>
-    <script src="script.js"></script>
+  <div class="container">
+    <header>
+      <h1>🌍 World Clock</h1>
+      <p>Track time around the world in real-time!</p>
+    </header>
+    <main>
+      <div class="time-display">
+        <h2>Your Local Time</h2>
+        <div id="current-time">--:--:--</div>
+      </div>
+      <div class="time-zone-selector">
+        <h3>Select Country / Time Zone</h3>
+        <select id="country-select">
+    
+        </select>
+        <div id="selected-time">--:--:--</div>
+      </div>
+    </main>
+  </div>
+  <script src="script.js"></script>
 </body>
-</html> 
+</html>
