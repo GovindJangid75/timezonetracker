@@ -1,41 +1,49 @@
-// Update current time
-function updateCurrentTime() {
-    const currentTimeElement = document.getElementById('current-time');
-    const now = new Date();
-    currentTimeElement.textContent = now.toLocaleTimeString();
+// Populate dropdown with all IANA time zones
+function populateTimeZones() {
+    const select = document.getElementById('country-select');
+    const timeZones = Intl.supportedValuesOf('timeZone');
+
+    timeZones.forEach(zone => {
+        const option = document.createElement('option');
+        option.value = zone;
+        option.textContent = zone.replace(/_/g, ' ');
+        select.appendChild(option);
+    });
 }
 
-// Update selected time zone
+// Update local time
+function updateCurrentTime() {
+    const currentTimeElement = document.getElementById('current-time');
+    currentTimeElement.textContent = new Date().toLocaleTimeString();
+}
+
+// Update selected time zone time
 function updateSelectedTime() {
     const selectedTimeElement = document.getElementById('selected-time');
-    const countrySelect = document.getElementById('country-select');
-    const selectedTimeZone = countrySelect.value;
+    const select = document.getElementById('country-select');
+    const timeZone = select.value;
 
-    if (selectedTimeZone) {
+    if (timeZone) {
         const time = new Date().toLocaleTimeString('en-US', {
-            timeZone: selectedTimeZone
+            timeZone: timeZone,
+            hour12: true
         });
         selectedTimeElement.textContent = time;
     } else {
-        selectedTimeElement.textContent = 'Please select a country';
+        selectedTimeElement.textContent = 'Please select a time zone';
     }
 }
 
-// Initialize the application
+// Initialize
 function init() {
-    // Update times immediately
+    populateTimeZones();
     updateCurrentTime();
     updateSelectedTime();
 
-    // Update current time every second
     setInterval(updateCurrentTime, 1000);
-
-    // Update selected time every second
     setInterval(updateSelectedTime, 1000);
-
 
     document.getElementById('country-select').addEventListener('change', updateSelectedTime);
 }
 
-
-document.addEventListener('DOMContentLoaded', init); 
+document.addEventListener('DOMContentLoaded', init);
