@@ -7,7 +7,7 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: linear-gradient(135deg, #7adf71 0%, #c3cfe2 100%);
     min-height: 100vh;
 }
 
@@ -56,7 +56,7 @@ main {
 }
 
 .time-display, .time-zone-selector {
-    background: white;
+    background: rgb(133, 199, 219);
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -96,3 +96,8 @@ select:focus {
         grid-template-columns: 1fr 1fr;
     }
 } 
+
+select {
+    max-height: 300px;
+    overflow-y: auto;
+}
